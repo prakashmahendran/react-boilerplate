@@ -7,6 +7,47 @@
  *
  */
 
+import React, { useEffect } from 'react';
+import { useStore } from 'react-redux';
+
+/**
+ * Dynamically injects a reducer
+ */
+
+export default ({ key, reducer }) => WrappedComponent => props => {
+  const store = useStore();
+  useEffect(() => {
+    store.injectReducer(key, reducer);
+    // could clean things up here
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return <WrappedComponent {...props} />;
+};
+
+
+import conformsTo from 'lodash/conformsTo';
+import isFunction from 'lodash/isFunction';
+import isObject from 'lodash/isObject';
+import invariant from 'invariant';
+
+/**
+ * Validate the shape of redux store
+ */
+export default function checkStore(store) {
+  const shape = {
+    dispatch: isFunction,
+    subscribe: isFunction,
+    getState: isFunction,
+    replaceReducer: isFunction,
+    injectedReducers: isObject,
+  };
+  invariant(
+    conformsTo(store, shape),
+    '(app/utils...) injectors: Expected a valid redux store',
+  );
+}
+
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
