@@ -1,4 +1,0 @@
-export const FETCH_PEOPLE = 'PEOPLE_SEARCHING';
-export const RECEIVE_PEOPLE = 'RECEIVE_PEOPLE';
-
-export const VIEW_PERSON = 'VIEW_PERSON';
