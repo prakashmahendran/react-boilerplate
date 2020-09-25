@@ -3,6 +3,7 @@ import {
     connect
 } from 'react-redux';
 import { compose } from 'redux';
+import { push } from 'connected-react-router';
 import injectReducer from '../../utils/injectReducer';
 import reducer from '../modules/reducer';
 import AppWrapper from '../components/AppWrapper';
@@ -16,6 +17,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+    push: (path) => dispatch(push(path)),
 });
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
