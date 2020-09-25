@@ -1,33 +1,23 @@
-/**
- *
- * AppWrapper
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. 
- *
- */
 
 import React from 'react';
-import '../modules/styles.scss';
-
-const INITIAL_STATE = {
-};
-
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = INITIAL_STATE;
-    }
-
     render() {
-
+        var myStyle = {
+            fontSize: 80,
+            fontFamily: 'Courier',
+            color: '#003300'
+        }
         return (
             <div>
-                <h1>Hello World</h1>
+                <h1>SRM - VEC</h1>
+                <h2>React JS Session</h2>
+                <p className="hello">Hello World </p>
+                <h1 style={myStyle}>Style Test</h1>
+                {/* This is a comment in JSX */}
             </div>
         );
     }
 }
-
-
 export default Home;
+
+
