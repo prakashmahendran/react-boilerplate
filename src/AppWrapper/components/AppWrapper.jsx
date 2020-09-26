@@ -32,6 +32,7 @@ class AppWrapper extends React.Component {
     render() {
         const {
             children,
+            userName,
         } = this.props;
 
         return (
@@ -55,6 +56,9 @@ class AppWrapper extends React.Component {
                             menuItems={NAV_MENU_ITEMS}
                         />
                         <Logo name="React" />
+                        <div className="uname_div">
+                            <span >{userName}</span>
+                        </div>
                     </div>
                 </header>
 

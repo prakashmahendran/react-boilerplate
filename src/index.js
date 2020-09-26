@@ -11,7 +11,6 @@ import configureStore from './configureStore';
 
 import AppWrapper from './AppWrapper';
 import Home from './pages/Home';
-import ComponentsExample from './pages/ComponentsExample';
 
 // Add promise support to the global window object if not found
 if (!window.Promise) window.Promise = Promise;
@@ -28,7 +27,6 @@ ReactDOM.render(
       <AppWrapper>
         <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/components" component={ComponentsExample} />
           <Route path="/" component={Home} />
         </Switch>
       </AppWrapper>

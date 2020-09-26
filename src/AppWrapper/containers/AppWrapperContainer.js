@@ -14,6 +14,7 @@ import {
 
 const mapStateToProps = (state) => ({
     appName: state.app.appName,
+    userName: state.home.userName,
 });
 
 const mapDispatchToProps = (dispatch) => ({

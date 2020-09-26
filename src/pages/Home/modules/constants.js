@@ -1,0 +1,1 @@
+export const HOME_SET_USER = 'HOME_SET_USER';
