@@ -19,7 +19,7 @@ export default ({ key, reducer }) => WrappedComponent => props => {
     useEffect(() => {
         store.injectReducer(key, reducer);
         // could clean things up here
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); 
 
     return <WrappedComponent {...props} />;
 };

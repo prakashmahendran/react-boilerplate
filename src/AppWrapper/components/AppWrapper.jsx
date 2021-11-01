@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import Logo from '../../components/Logo';
 import NavMenu from '../../components/NavMenu';
-import '../modules/styles.scss';
+import '../modules/styles.css';
 import { NAV_MENU_ITEMS } from '../modules/constants';
 
 const INITIAL_STATE = {

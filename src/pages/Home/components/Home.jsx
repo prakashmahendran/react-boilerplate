@@ -2,7 +2,7 @@
 import React from 'react';
 
 import reactLogo from '../../../assets/icons/avatar.jpg';
-import '../modules/styles.scss';
+import '../modules/styles.css';
 
 
 const INITIAL_STATE = {

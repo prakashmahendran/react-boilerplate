@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from 'rc-dropdown';
 import Menu, { Item as MenuItem } from 'rc-menu';
 import 'rc-dropdown/assets/index.css';
-import './styles.scss';
+import './styles.css';
 
 class NavMenu extends React.Component {
 
